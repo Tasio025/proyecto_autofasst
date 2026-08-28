@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autofast</title>
+    <!-- Enlace a Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="EstiloDeInfo.css">
+    <!--ACTUALIZACIÓN ENERO 2025: MEJORAMOS LA PÁGINA PARA UNA MEJOR BASE-->
+    <!--1_ MEJORA EL USO DEL CSS PARA UNA MEJOR ESTÉTICA-->
+    <style>
+        h1{
+     font-family: Arial, Helvetica, sans-serif; color: rgb(219, 185, 18); background-color:rgb(3, 3, 3);
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif; color: rgb(219, 185, 18); background-color:rgb(2, 2, 2);
+}
+.card-body{
+    background-color: gray;
+}
+.car-title{
+    font-family: Arial, Helvetica, sans-serif; color: rgb(219, 185, 18)
+}
+.card-text{
+    font-family: Arial, Helvetica, sans-serif; color: rgb(219, 185, 18)
+}
+        .button a {
+            color: rgb(219, 185, 18);
+            margin-left: 15px;
+            text-decoration: none;
+        }
+        .navbar{
+            padding: 1rem 0;
+        }
+        .carousel-inner img{
+            object-fit: cover;
+            height: 500px;
+        }
+        .card-header, .card-footer{
+            background-color: #f8f9fa;
+            border-color: #e9ecef;
+        }
+        button, a.btn{
+            border-radius: 50px;
+        }
+        .container p{
+            font-size: 1rem;
+        }
+        h1, h4{
+            font-weight: bold;
+        }
+        :root{
+            --color-principal:rgb(219, 185, 18);
+            --color-secundario: rgb(219, 185, 18);
+            --fuente-primcipal: 'Arial', sans-serif;
+        }
+        body{
+            font-family: var(--fuente-primcipal);
+            background-color: white;
+        }
+        .navbar{
+            background-color: var(--color-principal);
+        }
+        .nav-link, .dropdown-item, .button a{
+            color: var(--color-secundario);
+        }
+        h1, h4, p{
+            color: var(--color-principal);
+        }
+        .card-body:hover{
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+        h3, h4, div{
+           color: rgb(219, 185, 18);
+        }
+    </style>
+</head> 
+<body style="background-color:white;">
+
+    <!-- Barra principal de búsqueda -->
+     <header>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(90, 83, 83);">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="img_para_tp/car-shield-star-emblem-logo-260nw-2061732866.webp" alt="Logo_empresa" height="50px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link" style="color: rgb(219, 185, 18);">HOME</a></li>
+                    <li class="nav-item"><a href="#VEHÍCULOS" class="nav-link" style="color: rgb(219, 185, 18);">VEHÍCULOS</a></li>
+                    <li class="nav-item"><a href="#UBICACIÓN" class="nav-link" style="color: rgb(219, 185, 18);">UBICACIÓN</a></li>
+                    <li class="nav-item"><a href="#CONTACTOS" class="nav-link" style="color: rgb(219, 185, 18);">CONTACTOS</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: rgb(219, 185, 18);">Redes Sociales</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    Instagram <img src="img_para_tp/IgLogo.jpg" width="50" height="50">
+                                    <p style="color: rgb(219, 185, 18); height: 50px;">@AutoFast</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    Whatsapp <img src="img_para_tp/Wpp.jpg" width="50" height="50">
+                                    <p style="color: rgb(219, 185, 18); height: 50px;">Tel:+5491190988665</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <form action="" class="d-flex">
+                <input type="search" class="form-control me-2" placeholder="Buscar"> <!--Barra de buscar-->
+                <button class="btn btn-outline-success" type="submit">
+                    <img src="img_para_tp/search_icon_125165.ico"> <!--La lupita de búsqueda-->
+                </button>
+            </form>
+            <div class="button">
+                <a href="Registro.html">Registrarse</a><br>
+                <a href="inicio_de_sesion.html">Iniciar sesión</a>
+            </div>
+        </div> 
+    </nav>
+</header>
+<!--2_ AJUSTAMOS EL DISEÑO RESPONSIVE, MAS ORDENADO Y SE VE BIEN EN CELULARES-->
+<main class="mt-5">
+    <section>
+        <div class="container">
+    <hr>
+    <h1>Información: <br> Somos una sucursal de compra y venta de autos usados</h1>
+    <hr>
+        </div>
+    </section>
+    <!-- Slider ==> Carrusel de imágenes -->
+    <div class="container py-4">
+        <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button class="active" data-bs-target="#carrusel" data-bs-slide-to="0"></button>
+                <button data-bs-target="#carrusel" data-bs-slide-to="1"></button>
+                <button data-bs-target="#carrusel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner carousel-fade carousel-dark">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img class="d-block w-100" src="img_para_tp/HombreNotebook.jpg" height="500">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 style="color: aliceblue;"><strong>Cotizá tu auto</strong></h3><br>
+                        <h4 style="color: aliceblue;"><strong>Contactanos por Instagram o Whatsapp y te decimos el valor de tu auto!</strong></h4>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img class="d-block w-100" src="img_para_tp/8.jpg" height="500">
+                    <div class="carousel-caption d-none d-md-block"></div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img class="d-block w-100" src="img_para_tp/9.jpg" height="500">
+                    <div class="carousel-caption d-none d-md-block"></div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-target="#carrusel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#carrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+    
+
+    <!-- Video -->
+    <div class="container p-2">
+        <div class="container">
+            <h1>Autos más económicos...</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="ratio ratio-16x9">
+                    <iframe src="img_para_tp/autos.mp4" allowfullscreen frameborder="0" class="embed-responsive-item" title="youtube"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>VEHÍCULOS</h1><a name="VEHÍCULOS"></a>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <div class="card text-center">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <img src="img_para_tp/10.jpg" alt="modelo de auto" class="img-fluid img-thumbnail mt-2 card-img-top">
+                        <h4 class="card-title">Ford Ecosport</h4>
+                        <p class="card-text">ARS $750.000</p>
+                        <a href="Ecosport.html" class="btn btn-primary mt-2">Consultar</a>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md">
+            <div class="card text-center">
+                <div class="card-header"></div>
+                <div class="card-body">
+                    <img src="img_para_tp/11.jpg" alt="Modelo de auto" class="img-fluid rounded-circle mt-2 card-img-top">
+                    <h4 class="card-title">Ford Ka Mod 98-Gnc-Bordó</h4><br>
+                    <p class="card-text">ARS $150.000</p>
+                    <a href="FordKa.html" class="btn btn-primary mt-2">Consultar</a>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card text-center">
+                <div class="card-header"></div>
+                <div class="card-body">
+                    <img src="img_para_tp/12.jpg" alt="Modelo de auto" class="img-fluid rounded-circle mt-2 card-img-top">
+                    <h4 class="card-title">Peugeot 207</h4>
+                    <p class="card-text">ARS $380.000</p>
+                    <a href="Peugeot.html" class="btn btn-primary mt-2">Consultar</a>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card text-center">
+                <div class="card-header"><h6></h6></div>
+                <div class="card-body">
+                    <img src="img_para_tp/8.jpg" alt="Modelo de auto" class="img-fluid rounded-circle mt-2 card-img-top">
+                    <h4 class="card-title">Volkswagen</h4>
+                    <p class="card-text">ARS $450.000</p>
+                    <a href="Volkswagen.html" class="btn btn-primary mt-2">Consultar</a>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md text-center border p-2">
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.79644987478!2d-58.670409077354854!3d-34.65984317194707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf5fef341919%3A0x9595e36573e6e601!2sLVD%2C%20Gral.%20Miguel%20Soler%20150%2C%20B1714%20Ituzaing%C3%B3%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1718374286975!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h1>UBICACIÓN</h1>
+                </div>
+                <h6>Dirección:</h6>
+                <p>Hipólito Yrigoyen 1600</p>
+                <a name="UBICACIÓN"></a>
+            </div>
+            <div class="col-md text-center border p-2">
+                <h1>CONTACTOS</h1>
+                <h6>WhatsApp:</h6>
+                <p>+5491190988665</p>
+                <h6>Instagram:</h6>
+                <p>@AutoFast</p>
+                <a name="CONTACTOS" class="btn btn-primary">Contactenos</a>
+            </div>
+        </div>
+    </div>
+</main>
+<!--3_ AGREGAMOS UN FOOTER AL FINAL DE LA PÁGINA-->
+<footer class="text-center mt-4 py-4" style="background-color: #f8f9fa;">
+    <p>2025 AutoFast. Todos los derechos reservados</p>
+</footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 1_ ANIMACIÓN DEL MENÚ DE NAVEGACIÓN
+        document.addEventListener('DOMContentLoaded', ()=>{
+            //Seleccionamos el botón y el menú
+            const navbarToggler = document.querySelector ('navbar-Toggler');
+            const menu = document.querySelector('#menu');
+
+            //Ahora agregamos el evento de click
+            navbarToggler.addEventListener('click', () =>{
+                menu.classList.toggle('show');
+            });
+        });
+
+        // 2_ RESALTADO DE ELEMENTOS AL PASAR EL MOUSE
+        document.addEventListener('DOMContentLoaded', () =>{
+            //Seleccionamos todos los elementos de las targetas
+            const cards = document.querySelectorAll('card');
+            //Función de resaltado
+            const highlightCard = (event) =>{
+                event.target.style.backgroundColor = 'lightblue';
+            };
+            //Función para quitar el resaltado
+            const resetCard = (event) =>{
+                event.target.style.backgroundColor ='';
+            };
+            //Añadimos eventos de mouseover y mouseout
+            cards.forEach(card =>{
+                card.addEventListener('mouseover', highlightCard);
+                card.addEventListener('mouseout', resetCard);
+            });
+        });
+
+        // 3_ SCROLL ANIMADO
+        document.addEventListener('DOMContentLiaded', () =>{
+            //Selecciono enlaces de navegación
+            const navLinks = document.querySelectorAll('nav ul li a');
+            //Añadimos evento de clik a cada enlace
+            navLinks.forEach(Link =>{
+                link.addEventListener('click', (event) =>{
+                    event.preventDefault(); //Previene el comportamiento por defecto
+            //Obtenemos el destino al que se quiere desplazar
+                    const targetId = event.target.getAttribute('href').substring(1);;
+                    const targetElement = document.getElementById(targetId);
+                    //Scroll suave
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
